@@ -1,11 +1,12 @@
-package com.jingbanyun.im
+package com.jingbanyun.im.ui.activity
 
 import android.os.Handler
+import com.jingbanyun.im.R
 import com.jingbanyun.im.contract.SplashContract
 import com.jingbanyun.im.presenter.SplashPresenter
 import org.jetbrains.anko.startActivity
 
-class SplashActivity:BaseActivity(),SplashContract.View {
+class SplashActivity: BaseActivity(),SplashContract.View {
 
     val presenter = SplashPresenter(this)
 
@@ -27,7 +28,7 @@ class SplashActivity:BaseActivity(),SplashContract.View {
         handler.postDelayed({
             startActivity<LoginActivity>()
             finish()
-        },DELAY)
+        }, DELAY)
     }
 
     //跳转到主界面

@@ -21,8 +21,4 @@
         app:bb_tabXmlResource="@xml/bottombar_tabs"
         app:bb_activeTabColor="@color/qq_blue">
     </com.roughike.bottombar.BottomBar>
-
-
-
-
 </LinearLayout>
