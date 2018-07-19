@@ -3,6 +3,7 @@ package com.jingbanyun.im.ui.activity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.text.Editable
+import android.text.TextUtils
 import android.text.TextWatcher
 import android.view.View
 import com.hyphenate.chat.EMClient
@@ -97,6 +98,10 @@ class ChatActivity : BaseActivity(), ChatContract.View {
     fun send() {
         hideSoftKeyborad()
         val message = edit.text.trim().toString()
+        if(TextUtils.isEmpty(message)){
+            toast("发送消息不能为空")
+            return
+        }
         presenter.sendMessage(username, message)
     }
 
